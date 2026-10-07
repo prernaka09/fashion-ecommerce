@@ -1,0 +1,35 @@
+export const ROUTES = {
+  // Customer Routes
+  HOME: '/',
+  SHOP: '/shop',
+  CATEGORY: (category = ':category') => `/category/${category}`,
+  PRODUCT_DETAILS: (id = ':id') => `/product/${id}`,
+  SEARCH: '/search',
+  WISHLIST: '/wishlist',
+  CART: '/cart',
+  CHECKOUT: '/checkout',
+  LOGIN: '/login',
+  REGISTER: '/register',
+  FORGOT_PASSWORD: '/forgot-password',
+  PROFILE: '/profile',
+  ORDERS: '/orders',
+  ORDER_DETAILS: (id = ':id') => `/orders/${id}`,
+  PAYMENT_SUCCESS: '/payment/success',
+  PAYMENT_FAILED: '/payment/failed',
+  RETURN_REQUEST: (orderId = ':orderId') => `/return/${orderId}`,
+
+  // Admin Routes
+  ADMIN: {
+    LOGIN: '/admin/login',
+    DASHBOARD: '/admin',
+    PRODUCTS: '/admin/products',
+    ADD_PRODUCT: '/admin/products/add',
+    EDIT_PRODUCT: (id = ':id') => `/admin/products/edit/${id}`,
+    ORDERS: '/admin/orders',
+    USERS: '/admin/users',
+    CATEGORIES: '/admin/categories',
+    COUPONS: '/admin/coupons',
+    REVIEWS: '/admin/reviews',
+    RETURNS: '/admin/returns',
+  },
+} as const
